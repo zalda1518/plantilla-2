@@ -2,6 +2,15 @@
 const back = document.getElementById("mountain-back");
 const front = document.getElementById("mountain-front");
 
+/* preloader */
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  preloader.classList.add("fade-out");
+  setTimeout(() => preloader.style.display = "none", 600);
+});
+
+/* preloader */
+
 window.addEventListener("scroll", () => {
   let value = window.scrollY;
  /*  back.style.transform = `translateY(${value * 0.2}px)`;   // más lento
@@ -41,3 +50,4 @@ window.addEventListener("scroll", () => {
 
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // evitar valores negativos
 });
+
